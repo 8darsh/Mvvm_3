@@ -20,39 +20,7 @@ protocol EndPointType{
     var url: URL? { get }
     
     var method: HTTPMethods { get }
+    var body: Encodable? {get}
+    var headers: [String:String]? {get}
 }
 
-enum EndPointItems{
-    
-    case products
-}
-
-// https://fakestoreapi.com/products
-extension EndPointItems: EndPointType{
-    var path: String {
-        switch self{
-        case .products:
-            return "products"
-        }
-    }
-    
-    var baseURL: String {
-        return "https://fakestoreapi.com/"
-    }
-    
-    var url: URL? {
-        return URL(string: "\(baseURL)\(path)")
-    }
-    
-    var method: HTTPMethods {
-        switch self{
-        case .products:
-            return .get
-        }
-    }
-    
-
-    
-    
-    
-}

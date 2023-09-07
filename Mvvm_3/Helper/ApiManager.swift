@@ -22,7 +22,7 @@ class ApiManager{
     
     init(){}
     
-    func request<T: Decodable>(
+    func request<T: Codable>(
         
         modelType: T.Type,
         type: EndPointType,
@@ -33,14 +33,24 @@ class ApiManager{
             completion(.failure(.invalidUrl))
             return
         }
+        var request = URLRequest(url: url)
+        request.httpMethod = type.method.rawValue
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        if let parameters = type.body{
+            request.httpBody = try? JSONEncoder().encode(parameters)
+        }
+        
+        request.allHTTPHeaderFields = type.headers
+        
+        
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
             
             guard let data, error == nil else{
                 completion(.failure(.invalidData))
                 return
             }
-            
+        
             guard let response = response as? HTTPURLResponse,
                   200...299 ~= response.statusCode else{
                 
@@ -58,6 +68,13 @@ class ApiManager{
             }
             
         }.resume()
+    }
+    
+    static var commonHeader: [String:String]{
+        return [
+            "Content-Type": "application/json"
+        
+        ]
     }
     
 //    func fetchProducts(completion: @escaping Handler){

@@ -20,7 +20,11 @@ class ProductViewController: UIViewController {
         configuaration()
     }
 
-
+    @IBAction func addProductBtn(_ sender: UIBarButtonItem) {
+        let product  = AddProduct(title: "iPhone")
+        viewModel.addProducts(parameter: product)
+    }
+    
 }
 
 extension ProductViewController{
@@ -55,6 +59,8 @@ extension ProductViewController{
                 
             case .error(let error):
                 print(error)
+            case .newProductAdded(let newProduct):
+                print(newProduct)
             }
         }
     }

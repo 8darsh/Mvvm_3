@@ -22,6 +22,9 @@
 		D22F050F2AA956E400FD725B /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D22F050E2AA956E400FD725B /* ProductCell.xib */; };
 		D22F05132AA958A700FD725B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D22F05122AA958A700FD725B /* Kingfisher */; };
 		D22F05152AA958BB00FD725B /* UiImageView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22F05142AA958BB00FD725B /* UiImageView + Extensions.swift */; };
+		D2A5BF3E2AAA541600E99337 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5BF3D2AAA541600E99337 /* AddProductViewController.swift */; };
+		D2A5BF402AAA5FE000E99337 /* AddProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5BF3F2AAA5FE000E99337 /* AddProduct.swift */; };
+		D2A5BF422AAA603100E99337 /* ProductEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5BF412AAA603100E99337 /* ProductEndPoint.swift */; };
 		D2F4AF662AA95D800090BEB1 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F4AF652AA95D800090BEB1 /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		D22F050C2AA956AE00FD725B /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		D22F050E2AA956E400FD725B /* ProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		D22F05142AA958BB00FD725B /* UiImageView + Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UiImageView + Extensions.swift"; sourceTree = "<group>"; };
+		D2A5BF3D2AAA541600E99337 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		D2A5BF3F2AAA5FE000E99337 /* AddProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProduct.swift; sourceTree = "<group>"; };
+		D2A5BF412AAA603100E99337 /* ProductEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductEndPoint.swift; sourceTree = "<group>"; };
 		D2F4AF652AA95D800090BEB1 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,9 +175,9 @@
 		D22F05002AA9477200FD725B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D22F050A2AA954A100FD725B /* ProductViewController.swift */,
-				D22F050C2AA956AE00FD725B /* ProductCell.swift */,
 				D22F050E2AA956E400FD725B /* ProductCell.xib */,
+				D22F050C2AA956AE00FD725B /* ProductCell.swift */,
+				D2A5BF3C2AAA53DF00E99337 /* Controller */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,14 +186,25 @@
 			isa = PBXGroup;
 			children = (
 				D22F05042AA947E300FD725B /* ProductModel.swift */,
+				D2A5BF3F2AAA5FE000E99337 /* AddProduct.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D2A5BF3C2AAA53DF00E99337 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D22F050A2AA954A100FD725B /* ProductViewController.swift */,
+				D2A5BF3D2AAA541600E99337 /* AddProductViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		D2F4AF642AA95D5E0090BEB1 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
 				D2F4AF652AA95D800090BEB1 /* EndPointType.swift */,
+				D2A5BF412AAA603100E99337 /* ProductEndPoint.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -272,12 +289,15 @@
 			files = (
 				D22F05092AA94E7D00FD725B /* ProductViewModel.swift in Sources */,
 				D22F04E02AA9469400FD725B /* AppDelegate.swift in Sources */,
+				D2A5BF422AAA603100E99337 /* ProductEndPoint.swift in Sources */,
+				D2A5BF3E2AAA541600E99337 /* AddProductViewController.swift in Sources */,
 				D22F04E22AA9469400FD725B /* SceneDelegate.swift in Sources */,
 				D22F05052AA947E300FD725B /* ProductModel.swift in Sources */,
 				D22F04EA2AA9469400FD725B /* Mvvm_3.xcdatamodeld in Sources */,
 				D2F4AF662AA95D800090BEB1 /* EndPointType.swift in Sources */,
 				D22F05072AA948C000FD725B /* ApiManager.swift in Sources */,
 				D22F05152AA958BB00FD725B /* UiImageView + Extensions.swift in Sources */,
+				D2A5BF402AAA5FE000E99337 /* AddProduct.swift in Sources */,
 				D22F050D2AA956AE00FD725B /* ProductCell.swift in Sources */,
 				D22F050B2AA954A100FD725B /* ProductViewController.swift in Sources */,
 				D22F05032AA9479C00FD725B /* Constant.swift in Sources */,
