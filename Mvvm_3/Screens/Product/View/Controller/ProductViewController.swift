@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Foundation
+
 class ProductViewController: UIViewController {
     
     private var viewModel = ProductViewModel()
